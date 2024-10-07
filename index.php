@@ -26,6 +26,20 @@
   	echo " <script> alert('The languages from the database have not loaded correctly!'); </script>" ;
   }
 
+	$sql = "SELECT * FROM `project-db`";
+	$projectBody = array();
+  if ($result = $link->query($sql)) {
+    $rowCount = mysqli_num_rows($result);
+
+    while ($row = $result->fetch_assoc()) {
+      /*print_r($row);*/
+      array_push($projectBody, $row);
+    }
+    /*echo $taskInfo[0]["en"];*/
+  }else {
+  	echo " <script> alert('The projects from the database have not loaded correctly!'); </script>" ;
+  }
+
 	if (!empty($_POST) && $_SERVER['REQUEST_METHOD'] == 'POST') {
 		if ($lang == "en") {
 			$lang = "de";
@@ -174,15 +188,20 @@
 
 			<div style="min-height: 400px; margin-bottom: 50px;">
 				<div class="slide-in-left-element project-page">
-					<img src="img/img-tradingbot.jpeg" alt="">
-					<h2>Trading Bot</h2>
+					<?php $projectName = 'projects-p-tb'; ?>
+					<img src="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-img'];?>" alt="">
+					<h2>
+						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['name'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+					</h2>
 					<div class="technologies">
 						<p class="python"><?php echo $technologies["python"]; ?></p>
 						<p class="sql"><?php echo $technologies["sql"]; ?></p>
 						<p class="api"><?php echo $technologies["api"]; ?></p>
 					</div>
 
-					<p class="preview">ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+					<p class="preview">
+						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description-short'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+					</p>
 
 					<button class="popup-btn" onclick="showProjectPopUp('mypopup2')" style="cursor: pointer;">
 						<?php echo $languageBody[array_search('projects-learnmore', array_column($languageBody, 'descriptor'))][$lang]; ?>
@@ -190,14 +209,19 @@
 				</div>
 
 				<div class="slide-in-right-element project-page">
-					<img src="img/img-arduinogc.jpeg" alt="">
-					<h2>Arduino Game Console</h2>
+					<?php $projectName = 'projects-p-agc'; ?>
+					<img src="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-img'];?>" alt="">
+					<h2>
+						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['name'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+					</h2>
 					<div class="technologies">
 						<p class="cpp"><?php echo $technologies["cpp"]; ?></p>
 						<p class="arduino"><?php echo $technologies["arduino"]; ?></p>
 					</div>
 
-					<p class="preview">ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+					<p class="preview">
+						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description-short'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+					</p>
 
 					<button class="popup-btn" onclick="showProjectPopUp('mypopup')" style="cursor: pointer;">
 						<?php echo $languageBody[array_search('projects-learnmore', array_column($languageBody, 'descriptor'))][$lang]; ?>
@@ -205,16 +229,22 @@
 				</div>
 			</div>
 
+
 			<div style="min-height: 400px;">
 				<div class="slide-in-left-element project-page">
-					<img src="img/img-imgrec.jpeg" alt="">
-					<h2>Image Recognition</h2>
+					<?php $projectName = 'projects-p-nr'; ?>
+					<img src="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-img'];?>" alt="">
+					<h2>
+						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['name'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+					</h2>
 					<div class="technologies">
 						<p class="python"><?php echo $technologies["python"]; ?></p>
 						<p class="ml"><?php echo $technologies["ml"]; ?></p>
 					</div>
 
-					<p class="preview">ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+					<p class="preview">
+						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description-short'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+					</p>
 
 					<button class="popup-btn" onclick="showProjectPopUp('mypopup2')" style="cursor: pointer;">
 						<?php echo $languageBody[array_search('projects-learnmore', array_column($languageBody, 'descriptor'))][$lang]; ?>
@@ -222,8 +252,11 @@
 				</div>
 
 				<div class="slide-in-right-element project-page">
-					<img src="img/img-portfolio-v2.jpeg" alt="">
-					<h2>Portfolio V2</h2>
+					<?php $projectName = 'projects-p-pv2'; ?>
+					<img src="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-img'];?>" alt="">
+					<h2>
+						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['name'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+					</h2>
 					<div class="technologies">
 						<p class="html"><?php echo $technologies["html"]; ?></p>
 						<p class="css"><?php echo $technologies["css"]; ?></p>
@@ -231,7 +264,9 @@
 						<p class="sql"><?php echo $technologies["sql"]; ?></p>
 						<p class="php"><?php echo $technologies["php"]; ?></p>
 					</div>
-					<p class="preview">ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+					<p class="preview">
+						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description-short'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+					</p>
 
 					<button class="popup-btn" onclick="showProjectPopUp('mypopup2')" style="cursor: pointer;">
 						<?php echo $languageBody[array_search('projects-learnmore', array_column($languageBody, 'descriptor'))][$lang]; ?>
