@@ -141,15 +141,36 @@
 		<!-- Projects ------------------------------------------------------------->
 		<div class="section project" style="">
 			<h1>Projects</h1>
-			<div class="slide-in-right-element project-page" style="background-color:green;">I slide in from the right side!</div>
+			<div style="min-height: 400px; margin-bottom: 50px;">
+				<div class="slide-in-left-element project-page">
+					<img src="img/stock_img.png" alt="">
+					<h2>Project 1</h2>
+					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+				</div>
 
-			<div class="slide-in-left-element project-page" style="background-color:blue;">I slide in from the right side!</div>
-			<br>
+				<div class="slide-in-right-element project-page">
+					<img src="img/stock_img.png" alt="">
+					<h2>Project 1</h2>
+					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
 
-			<div class="slide-in-right-element project-page" style="background-color:green;">I slide in from the right side!</div>
+				</div>
+			</div>
 
-			<div class="slide-in-left-element project-page" style="background-color:blue;">I slide in from the right side!</div>
+			<div style="min-height: 400px;">
+				<div class="slide-in-left-element project-page">
+					<img src="img/stock_img.png" alt="">
+					<h2>Project 1</h2>
+					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
 
+				</div>
+
+				<div class="slide-in-right-element project-page">
+					<img src="img/stock_img.png" alt="">
+					<h2>Project 1</h2>
+					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+
+				</div>
+			</div>
 		</div>
 
 		<!-- About me ------------------------------------------------------------->
