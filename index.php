@@ -43,6 +43,20 @@
 
 	$page_name = "Home";
 
+	$technologies = [
+		"html" => "HTML",
+		"css" => "CSS",
+		"js" => "JavaScript",
+		"sql" => "SQL",
+		"php" => "PHP",
+		"python" => "Python",
+		"cpp" => "C++",
+		"api" => "API",
+		"arduino" => "Arduino",
+		"ml" => "Machine Learning",
+		"" => "",
+	]
+
 ?>
 
 
@@ -162,24 +176,32 @@
 				<div class="slide-in-left-element project-page">
 					<img src="img/img-tradingbot.jpeg" alt="">
 					<h2>Trading Bot</h2>
-					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+					<div class="technologies">
+						<p class="python"><?php echo $technologies["python"]; ?></p>
+						<p class="sql"><?php echo $technologies["sql"]; ?></p>
+						<p class="api"><?php echo $technologies["api"]; ?></p>
+					</div>
+
+					<p class="preview">ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
 
 					<button class="popup-btn" onclick="showProjectPopUp('mypopup2')" style="cursor: pointer;">
-						Learn More
+						<?php echo $languageBody[array_search('projects-learnmore', array_column($languageBody, 'descriptor'))][$lang]; ?>
 					</button>
-
 				</div>
 
 				<div class="slide-in-right-element project-page">
 					<img src="img/img-arduinogc.jpeg" alt="">
 					<h2>Arduino Game Console</h2>
-					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+					<div class="technologies">
+						<p class="cpp"><?php echo $technologies["cpp"]; ?></p>
+						<p class="arduino"><?php echo $technologies["arduino"]; ?></p>
+					</div>
+
+					<p class="preview">ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
 
 					<button class="popup-btn" onclick="showProjectPopUp('mypopup')" style="cursor: pointer;">
-						Learn More
-
+						<?php echo $languageBody[array_search('projects-learnmore', array_column($languageBody, 'descriptor'))][$lang]; ?>
 					</button>
-
 				</div>
 			</div>
 
@@ -187,15 +209,33 @@
 				<div class="slide-in-left-element project-page">
 					<img src="img/img-imgrec.jpeg" alt="">
 					<h2>Image Recognition</h2>
-					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+					<div class="technologies">
+						<p class="python"><?php echo $technologies["python"]; ?></p>
+						<p class="ml"><?php echo $technologies["ml"]; ?></p>
+					</div>
 
+					<p class="preview">ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+
+					<button class="popup-btn" onclick="showProjectPopUp('mypopup2')" style="cursor: pointer;">
+						<?php echo $languageBody[array_search('projects-learnmore', array_column($languageBody, 'descriptor'))][$lang]; ?>
+					</button>
 				</div>
 
 				<div class="slide-in-right-element project-page">
 					<img src="img/img-portfolio-v2.jpeg" alt="">
 					<h2>Portfolio V2</h2>
-					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+					<div class="technologies">
+						<p class="html"><?php echo $technologies["html"]; ?></p>
+						<p class="css"><?php echo $technologies["css"]; ?></p>
+						<p class="js"><?php echo $technologies["js"]; ?></p>
+						<p class="sql"><?php echo $technologies["sql"]; ?></p>
+						<p class="php"><?php echo $technologies["php"]; ?></p>
+					</div>
+					<p class="preview">ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
 
+					<button class="popup-btn" onclick="showProjectPopUp('mypopup2')" style="cursor: pointer;">
+						<?php echo $languageBody[array_search('projects-learnmore', array_column($languageBody, 'descriptor'))][$lang]; ?>
+					</button>
 				</div>
 			</div>
 		</div>

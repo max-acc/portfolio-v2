@@ -443,10 +443,10 @@ header .language img {
 	margin-bottom: 10px;
 }
 
-.project .project-page p {
+.project .project-page .preview {
 	width: calc(var(--page-width) / 2.2 - 30px);
 	height: 100px;
-	margin: 10px 15px;
+	margin: 20px 15px;
 	text-align: justify;
 	overflow-wrap: break-word;
 }
@@ -458,8 +458,89 @@ header .language img {
 	border-radius: 15px 15px 0px 0px;
 }
 
-.project .project-page .popup-btn {
+.project .technologies {
+	margin: 0 10px;
+	font-size: 0.7em;
+}
 
+.project .technologies p {
+	display: inline;
+	margin: 0 5px;
+	padding: 3px;
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+.html {
+	color: #e34d23;
+	border-color: #e34d23;
+}
+
+.css {
+	color: #2748ef;
+	border-color: #2748ef;
+}
+
+.js {
+	color: #f8dd1e;
+	border-color: #f8dd1e;
+}
+
+.sql {
+	color: #e38c00;
+	border-color: #e38c00;
+}
+
+.php {
+	color: #4F5D95;
+	border-color: #4F5D95;
+}
+
+.python {
+	color: #3572A5;
+	border-color: #3572A5;
+}
+
+.cpp {
+	color: #f34b7d;
+	border-color: #f34b7d;
+}
+
+.api {
+	color: #007BFF;
+	border-color: #007BFF;
+}
+
+.arduino {
+	color: #00989d;
+	border-color: #00989d;
+}
+
+.ml {
+	color: #20C997;
+	border-color: #20C997;
+}
+
+.sample {
+	color: #;
+	border-color: #;
+}
+
+.sample {
+	color: #;
+	border-color: #;
+}
+
+.project .project-page .popup-btn {
+	background-color: transparent;
+	color: var(--color-primary);
+	font-size: 1em;
+	font-weight: bolder;
+	border: none;
+	width: calc(var(--page-width) / 2.2);
+	height: 40px;
+	padding: 0;
+	text-align: center;
 }
 
  .popup {
@@ -650,12 +731,12 @@ th.slide-in-right-element, td.slide-in-right-element {
   .slide-in-left-element {
     animation: slide-from-left linear both;
     animation-timeline: view();
-    animation-range: 0vh 40vh;
+    animation-range: 0vh 30vh;
   }
 	.slide-in-right-element {
     animation: slide-from-right linear both;
     animation-timeline: view();
-    animation-range: 0vh 40vh;
+    animation-range: 0vh 30vh;
   }
 	.scale-up-element {
 		animation: scale-up linear both;
