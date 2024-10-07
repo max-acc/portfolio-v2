@@ -160,7 +160,7 @@
 
 			<div style="min-height: 400px; margin-bottom: 50px;">
 				<div class="slide-in-left-element project-page">
-					<img src="img/stock_img.png" alt="">
+					<img src="img/img-tradingbot.jpeg" alt="">
 					<h2>Trading Bot</h2>
 					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
 
@@ -171,7 +171,7 @@
 				</div>
 
 				<div class="slide-in-right-element project-page">
-					<img src="img/stock_img.png" alt="">
+					<img src="img/img-arduinogc.jpeg" alt="">
 					<h2>Arduino Game Console</h2>
 					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
 
@@ -185,14 +185,14 @@
 
 			<div style="min-height: 400px;">
 				<div class="slide-in-left-element project-page">
-					<img src="img/stock_img.png" alt="">
+					<img src="img/img-imgrec.jpeg" alt="">
 					<h2>Image Recognition</h2>
 					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
 
 				</div>
 
 				<div class="slide-in-right-element project-page">
-					<img src="img/stock_img.png" alt="">
+					<img src="img/img-portfolio-v2.jpeg" alt="">
 					<h2>Portfolio V2</h2>
 					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
 
@@ -205,11 +205,11 @@
 			<table>
 				<tr>
 					<th class="slide-in-left-element"></th>
-					<th class="slide-in-right-element"><h1>About me</h1></th>
+					<th class="slide-in-right-element" style="margin-bottom: 25px;"><h1><?php echo $languageBody[array_search('aboutme-heading', array_column($languageBody, 'descriptor'))][$lang]; ?></h1></th>
 				</tr>
 				<tr>
 					<td class="background slide-in-left-element">Background</td>
-					<td class= "description slide-in-right-element">Description</td>
+					<td class= "description slide-in-right-element"><?php echo $languageBody[array_search('aboutme-paragraph', array_column($languageBody, 'descriptor'))][$lang]; ?></td>
 				</tr>
 			</table>
 		</div>
