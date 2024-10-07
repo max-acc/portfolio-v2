@@ -115,8 +115,8 @@
 					<p>Max Wenk</p>
 				</div>
 				<div class="navigation">
-					<a style="font-style: underline; font-weight: bold;" href="#start">Home</a>
-					<a href="portfolio.php">Portfolio</a>
+					<a style="float: left; margin-left: 70px; text-align: right; font-style: underline; font-weight: bold;" href="#start">Home</a>
+					<a style="float: right; margin-right: 70px; text-align: left;" href="portfolio.php">Portfolio</a>
 				</div>
 				<div class="language">
 					<form class="" action="" method="post">
@@ -139,15 +139,16 @@
 		</div>
 
 		<!-- Projects ------------------------------------------------------------->
-		<div class="section" style="">
+		<div class="section project" style="">
 			<h1>Projects</h1>
-			<div class="slide-in-right-element" style="background-color:green;">I slide in from the right side!</div>
+			<div class="slide-in-right-element project-page" style="background-color:green;">I slide in from the right side!</div>
 
-			<div class="slide-in-left-element" style="background-color:blue;">I slide in from the right side!</div>
-			<br>
-			<div class="slide-in-left-element" style="background-color:blue;">I slide in from the right side!</div>
+			<div class="slide-in-left-element project-page" style="background-color:blue;">I slide in from the right side!</div>
 			<br>
 
+			<div class="slide-in-right-element project-page" style="background-color:green;">I slide in from the right side!</div>
+
+			<div class="slide-in-left-element project-page" style="background-color:blue;">I slide in from the right side!</div>
 
 		</div>
 

@@ -91,11 +91,15 @@ header .nav-name p {
 
 header .navigation {
 	text-align: center;
+	display: block;
 }
 
 header .navigation a {
+	display: block;
 	margin: 0 20px;
 	font-size: 1em;
+	width: 70px;
+	height: 100px;
 }
 
 header .language form {
@@ -468,13 +472,13 @@ header .language img {
 div.slide-in-left-element {
 	float: left;
 	display: inline;
-	width: calc(var(--page-width) /2);
+	width: calc(var(--page-width)/2.2);
 }
 
 div.slide-in-right-element {
 	float: right;
 	display: inline;
-	width: calc(var(--page-width) /2);
+	width: calc(var(--page-width) /2.2);
 }
 
 th.slide-in-left-element, td.slide-in-left-element {
