@@ -58,6 +58,8 @@
 		<link rel="stylesheet"  href="style/style.css"  type="text/css">
 		<link rel="stylesheet"  href="style/index.css"  type="text/css">
 
+		<script src="script.js"></script>
+
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
 
     <!-- Meta data -->
@@ -70,7 +72,7 @@
 	</head>
 
 
-	<body>
+	<body id="body">
 		<div id="start" class="pre-landing">
 			<div class="page-sep left">
 				<div class="css-typing">
@@ -139,19 +141,44 @@
 		</div>
 
 		<!-- Projects ------------------------------------------------------------->
+		<div class="popup" id="mypopup2">
+			popuptext
+			<button class="popup-btn" onclick="showProjectPopUp('mypopup2')" style="cursor: pointer;">
+				Learn More
+
+			</button>
+		</div>
+		<div class="popup" id="mypopup">
+			popuptext
+			<button class="popup-btn" onclick="showProjectPopUp('mypopup')" style="cursor: pointer;">
+				Learn More
+
+			</button>
+		</div>
 		<div class="section project" style="">
 			<h1>Projects</h1>
+
 			<div style="min-height: 400px; margin-bottom: 50px;">
 				<div class="slide-in-left-element project-page">
 					<img src="img/stock_img.png" alt="">
-					<h2>Project 1</h2>
+					<h2>Trading Bot</h2>
 					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+
+					<button class="popup-btn" onclick="showProjectPopUp('mypopup2')" style="cursor: pointer;">
+						Learn More
+					</button>
+
 				</div>
 
 				<div class="slide-in-right-element project-page">
 					<img src="img/stock_img.png" alt="">
-					<h2>Project 1</h2>
+					<h2>Arduino Game Console</h2>
 					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
+
+					<button class="popup-btn" onclick="showProjectPopUp('mypopup')" style="cursor: pointer;">
+						Learn More
+
+					</button>
 
 				</div>
 			</div>
@@ -159,14 +186,14 @@
 			<div style="min-height: 400px;">
 				<div class="slide-in-left-element project-page">
 					<img src="img/stock_img.png" alt="">
-					<h2>Project 1</h2>
+					<h2>Image Recognition</h2>
 					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
 
 				</div>
 
 				<div class="slide-in-right-element project-page">
 					<img src="img/stock_img.png" alt="">
-					<h2>Project 1</h2>
+					<h2>Portfolio V2</h2>
 					<p>ölajfdlöjaöskdlfjölaskdjfölasdkjfölkajsdöfkljasdöflkjasödlfkjaösldkfjöalsdjkföalskdfjöalsdkfjaösdlkfjasödlkfjasödlkfjasödlkfj</p>
 
 				</div>

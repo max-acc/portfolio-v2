@@ -29,6 +29,11 @@ body {
 	min-width: 100vw;
 	overflow-x: hidden;
 }
+
+.stop-scroll {
+	overflow-y: hidden;
+}
+
 h1, h2, h3, p, a, th, td, span {
   font-style: normal;
   text-decoration: none;
@@ -411,6 +416,12 @@ header .language img {
 	padding-bottom: 50px;
 }
 
+.blur {
+	filter: blur(2px) brightness(67%);
+	animation-name: blur-in;
+	animation-duration: 1s;
+}
+
 .project {
 	min-height: 100vh;
 }
@@ -445,6 +456,29 @@ header .language img {
   height: 130px;
   object-fit: cover;
 	border-radius: 15px 15px 0px 0px;
+}
+
+.project .project-page .popup-btn {
+
+}
+
+ .popup {
+	visibility: hidden;
+	z-index: 43;
+	width: calc(var(--page-width) * 0.8);
+	height: 60vh;
+	background-color: var(--color-header);
+	position: fixed;
+
+	top: -100px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+
+ .show {
+	visibility: visible;
+	animation-name: fade-in;
+	animation-duration: 1s;
 }
 
 .aboutme table {
@@ -564,6 +598,24 @@ th.slide-in-right-element, td.slide-in-right-element {
 	}
 }
 
+@keyframes fade-in {
+  from {
+		opacity: 0;
+  }
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes blur-in {
+	from {
+		filter: blur(0px);
+	}
+	to {
+		filter: blur(2px) brightness(67%);
+	}
+}
+
 @keyframes scale-up {
   from {
 		scale: 0.5;
@@ -593,12 +645,12 @@ th.slide-in-right-element, td.slide-in-right-element {
   .slide-in-left-element {
     animation: slide-from-left linear both;
     animation-timeline: view();
-    animation-range: -20vh 40vh;
+    animation-range: 0vh 40vh;
   }
 	.slide-in-right-element {
     animation: slide-from-right linear both;
     animation-timeline: view();
-    animation-range: -20vh 40vh;
+    animation-range: 0vh 40vh;
   }
 	.scale-up-element {
 		animation: scale-up linear both;
