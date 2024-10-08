@@ -82,7 +82,7 @@
 			</div>
 		</header>
 
-    <div class="space"></div>
+    <!--<div class="space"></div>-->
 
     <?php
 
@@ -93,13 +93,9 @@
     } else {
       $projectLineCount = $projectNumber / 2;
     }
-    echo $projectLineCount;
 
-    ?>
-
-    <?php
-    for ($project=0; $project < $projectNumber; $project++) {
-      echo $projectName = $projectBody[$project]['descriptor']; ?>
+    /*--- Dynamic loaded popups ----------------------------------------------*/
+    for ($project=0; $project < $projectNumber; $project++) { ?>
   		<div class="popup" id="<?php echo $projectName ?>">
   			<div class="popup-header" style="width: 80%; float: left;">
   				<h2>
@@ -136,26 +132,66 @@
   				<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description'], array_column($languageBody, 'descriptor'))][$lang]; ?>
   			</p>
   		</div>
-
-
-
-
-
     <?php
-  }
+  }?>
 
 
 
+    <!--- Dynamic loaded project previews ------------------------------------->
+    <div class="section project" style="">
+			<h1>Projects</h1>
+      <?php
+        $tempProjectCounter = 0;
 
+        for ($projectLine=0; $projectLine < $projectLineCount; $projectLine++) {
+          ?>
+          <div style="min-height: 450px; margin-bottom: 50px;">
+            <?php
+            for ($projectPerLine=0; $projectPerLine < 2; $projectPerLine++) {?>
+              <div class="project-page
+                <?php
+                if (($tempProjectCounter % 2) == 0) {
+                  echo "slide-in-left-element";
+                } else {
+                  echo "slide-in-right-element";
+                }
+                 ?>
+              ">
+      					<?php $projectName = $projectBody[$tempProjectCounter]['descriptor']; ?>
+      					<img src="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-img'];?>" alt="">
+      					<h2>
+      						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['name'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+      					</h2>
+      					<div class="technologies">
+      						<?php
+      							$technology = $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['technology'];
+      							$technologySplit = explode(";", $technology);
+      							foreach ($technologySplit as $item) {
+      								$item = str_replace(' ', '', $item);
+      								?><p class="<?php echo $item; ?>"><?php echo $technologies[$item]; ?></p><?php
+      							}
+      						?>
+      					</div>
 
-    $tempProjectCounter = 0;
-/*
-    for ($i=0; $i < $projectLineCount; $i++) {
+      					<p class="preview">
+      						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description-short'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+      					</p>
 
+      					<button class="popup-btn" onclick="showProjectPopUp('<?php echo $projectName; ?>')" style="cursor: pointer;">
+      						<?php echo $languageBody[array_search('projects-learnmore', array_column($languageBody, 'descriptor'))][$lang]; ?>
+      					</button>
+      				</div>
 
+              <?php
+              $tempProjectCounter++;
+            }
 
-    }*/
-    ?>
+            ?>
+          </div>
+
+        <?php
+        }
+      ?>
 
   </body>
 </html>
