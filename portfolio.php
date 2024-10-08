@@ -95,7 +95,8 @@
     }
 
     /*--- Dynamic loaded popups ----------------------------------------------*/
-    for ($project=0; $project < $projectNumber; $project++) { ?>
+    for ($project=0; $project < $projectNumber; $project++) {
+      $projectName = $projectBody[$project]['descriptor']; ?>
   		<div class="popup" id="<?php echo $projectName ?>">
   			<div class="popup-header" style="width: 80%; float: left;">
   				<h2>
