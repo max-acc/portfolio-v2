@@ -186,8 +186,14 @@
 					?>
 				</div>
 				<div class="">
-					<a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'];?>"><img src="img/browser.png" alt=""></a>
-					<a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'];?>"><img src="img/github.png" alt=""></a>
+					<?php
+						if ($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'] != "") {
+							?> <a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'];?>" target="_blank"><img src="img/browser.png" alt=""></a> <?php
+						}
+						if ($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'] != "") {
+							?> <a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'];?>" target="_blank"><img src="img/github.png" alt=""></a> <?php
+						}
+					 ?>
 				</div>
 			</div>
 			<div class="popup-header" style="width: 20%; float: right;">
@@ -218,8 +224,14 @@
 					?>
 				</div>
 				<div class="">
-					<a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'];?>"><img src="img/browser.png" alt=""></a>
-					<a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'];?>"><img src="img/github.png" alt=""></a>
+					<?php
+						if ($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'] != "") {
+							?> <a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'];?>" target="_blank"><img src="img/browser.png" alt=""></a> <?php
+						}
+						if ($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'] != "") {
+							?> <a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'];?>" target="_blank"><img src="img/github.png" alt=""></a> <?php
+						}
+					 ?>
 				</div>
 			</div>
 			<div class="popup-header" style="width: 20%; float: right;">
@@ -250,8 +262,14 @@
 					?>
 				</div>
 				<div class="">
-					<a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'];?>"><img src="img/browser.png" alt=""></a>
-					<a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'];?>"><img src="img/github.png" alt=""></a>
+					<?php
+						if ($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'] != "") {
+							?> <a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'];?>" target="_blank"><img src="img/browser.png" alt=""></a> <?php
+						}
+						if ($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'] != "") {
+							?> <a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'];?>" target="_blank"><img src="img/github.png" alt=""></a> <?php
+						}
+					 ?>
 				</div>
 			</div>
 			<div class="popup-header" style="width: 20%; float: right;">
@@ -282,8 +300,14 @@
 					?>
 				</div>
 				<div class="">
-					<a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'];?>"><img src="img/browser.png" alt=""></a>
-					<a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'];?>"><img src="img/github.png" alt=""></a>
+					<?php
+						if ($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'] != "") {
+							?> <a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'];?>" target="_blank"><img src="img/browser.png" alt=""></a> <?php
+						}
+						if ($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'] != "") {
+							?> <a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'];?>" target="_blank"><img src="img/github.png" alt=""></a> <?php
+						}
+					 ?>
 				</div>
 			</div>
 			<div class="popup-header" style="width: 20%; float: right;">
@@ -301,7 +325,7 @@
 		<div class="section project" style="">
 			<h1>Projects</h1>
 
-			<div style="min-height: 400px; margin-bottom: 50px;">
+			<div style="min-height: 450px; margin-bottom: 50px;">
 				<div class="slide-in-left-element project-page">
 					<?php $projectName = 'projects-p-tb'; ?>
 					<img src="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-img'];?>" alt="">
@@ -356,7 +380,7 @@
 			</div>
 
 
-			<div style="min-height: 400px;">
+			<div style="min-height: 450px;">
 				<div class="slide-in-left-element project-page">
 					<?php $projectName = 'projects-p-nr'; ?>
 					<img src="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-img'];?>" alt="">

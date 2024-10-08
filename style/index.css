@@ -432,7 +432,7 @@ header .language img {
 }
 
 .project .project-page {
-  height: 400px;
+  height: 450px;
   border-radius: 15px;
   background-color: var(--color-header);
 }
@@ -445,10 +445,18 @@ header .language img {
 
 .project .project-page .preview {
 	width: calc(var(--page-width) / 2.2 - 30px);
-	height: 100px;
+	height: 140px;
+	line-height: 1.2em;
 	margin: 20px 15px;
-	text-align: justify;
+	text-align: left;
+	font-size: 0.95em;
 	overflow-wrap: break-word;
+}
+
+.project .project-page br {
+	content: "A" !important;
+  display: block !important;
+  margin-bottom: 5px !important;
 }
 
 .project div .project-page img {
