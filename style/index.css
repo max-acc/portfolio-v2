@@ -458,12 +458,12 @@ header .language img {
 	border-radius: 15px 15px 0px 0px;
 }
 
-.project .technologies {
+.technologies {
 	margin: 0 10px;
 	font-size: 0.7em;
 }
 
-.project .technologies p {
+.technologies p {
 	display: inline;
 	margin: 0 5px;
 	padding: 3px;
@@ -550,10 +550,60 @@ header .language img {
 	height: 60vh;
 	background-color: var(--color-header);
 	position: fixed;
+	border-radius: 15px;
 
 	top: -100px;
 	left: 50%;
 	transform: translate(-50%, 50%);
+}
+
+.popup .popup-header {
+	height: 170px;
+}
+
+.popup .popup-header h2 {
+	margin-top: 30px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+}
+
+.popup .popup-header .technologies {
+
+}
+
+.popup .popup-header img {
+	height: 40px;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+
+.popup .popup-header button {
+	background-color: transparent;
+	color: var(--color-primary);
+	font-size: 3em;
+	font-weight: bolder;
+	border: none;
+	height: 40px;
+	padding: 0;
+	text-align: right;
+	float: right;
+	margin-right: 30px;
+	margin-top: 18px;
+}
+
+.popup hr {
+	border-color: var(--color-background);
+	color: var(--color-background);
+	background-color: var(--color-background);
+	border: none;
+	height: 5px;
+	width: 100%;
+}
+
+.popup .popup-text {
+	margin: 20px 15px;
+	text-align: justify;
+	overflow-wrap: break-word;
 }
 
  .show {

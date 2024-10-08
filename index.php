@@ -169,20 +169,44 @@
 		</div>
 
 		<!-- Projects ------------------------------------------------------------->
-		<div class="popup" id="mypopup2">
-			popuptext
-			<button class="popup-btn" onclick="showProjectPopUp('mypopup2')" style="cursor: pointer;">
-				Learn More
-
-			</button>
+		<div class="popup" id="projects-p-tb">
+			<?php $projectName = 'projects-p-tb'; ?>
+			<div class="popup-header" style="width: 80%; float: left;">
+				<h2>
+					<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['name'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+				</h2>
+				<div class="technologies">
+					<p class="python"><?php echo $technologies["python"]; ?></p>
+					<p class="sql"><?php echo $technologies["sql"]; ?></p>
+					<p class="api"><?php echo $technologies["api"]; ?></p>
+				</div>
+				<div class="">
+					<a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-webpage'];?>"><img src="img/browser.png" alt=""></a>
+					<a href="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-github'];?>"><img src="img/github.png" alt=""></a>
+				</div>
+			</div>
+			<div class="popup-header" style="width: 20%; float: right;">
+				<button class="popup-btn" onclick="showProjectPopUp('<?php echo $projectName; ?>')" style="cursor: pointer;">
+					&#10006;
+				</button>
+			</div>
+			<hr>
+			<p class="popup-text">
+				<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+			</p>
 		</div>
+
+		<!--
 		<div class="popup" id="mypopup">
 			popuptext
 			<button class="popup-btn" onclick="showProjectPopUp('mypopup')" style="cursor: pointer;">
 				Learn More
 
 			</button>
-		</div>
+			<hr>
+		</div>-->
+
+
 		<div class="section project" style="">
 			<h1>Projects</h1>
 
@@ -194,16 +218,21 @@
 						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['name'], array_column($languageBody, 'descriptor'))][$lang]; ?>
 					</h2>
 					<div class="technologies">
-						<p class="python"><?php echo $technologies["python"]; ?></p>
-						<p class="sql"><?php echo $technologies["sql"]; ?></p>
-						<p class="api"><?php echo $technologies["api"]; ?></p>
+						<?php
+							$technology = $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['technology'];
+							$technologySplit = explode(";", $technology);
+							foreach ($technologySplit as $item) {
+								$item = str_replace(' ', '', $item);
+								?><p class="<?php echo $item; ?>"><?php echo $technologies[$item]; ?></p><?php
+							}
+						?>
 					</div>
 
 					<p class="preview">
 						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description-short'], array_column($languageBody, 'descriptor'))][$lang]; ?>
 					</p>
 
-					<button class="popup-btn" onclick="showProjectPopUp('mypopup2')" style="cursor: pointer;">
+					<button class="popup-btn" onclick="showProjectPopUp('<?php echo $projectName; ?>')" style="cursor: pointer;">
 						<?php echo $languageBody[array_search('projects-learnmore', array_column($languageBody, 'descriptor'))][$lang]; ?>
 					</button>
 				</div>
@@ -215,8 +244,14 @@
 						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['name'], array_column($languageBody, 'descriptor'))][$lang]; ?>
 					</h2>
 					<div class="technologies">
-						<p class="cpp"><?php echo $technologies["cpp"]; ?></p>
-						<p class="arduino"><?php echo $technologies["arduino"]; ?></p>
+						<?php
+							$technology = $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['technology'];
+							$technologySplit = explode(";", $technology);
+							foreach ($technologySplit as $item) {
+								$item = str_replace(' ', '', $item);
+								?><p class="<?php echo $item; ?>"><?php echo $technologies[$item]; ?></p><?php
+							}
+						?>
 					</div>
 
 					<p class="preview">
@@ -238,8 +273,14 @@
 						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['name'], array_column($languageBody, 'descriptor'))][$lang]; ?>
 					</h2>
 					<div class="technologies">
-						<p class="python"><?php echo $technologies["python"]; ?></p>
-						<p class="ml"><?php echo $technologies["ml"]; ?></p>
+						<?php
+							$technology = $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['technology'];
+							$technologySplit = explode(";", $technology);
+							foreach ($technologySplit as $item) {
+								$item = str_replace(' ', '', $item);
+								?><p class="<?php echo $item; ?>"><?php echo $technologies[$item]; ?></p><?php
+							}
+						?>
 					</div>
 
 					<p class="preview">
@@ -258,11 +299,14 @@
 						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['name'], array_column($languageBody, 'descriptor'))][$lang]; ?>
 					</h2>
 					<div class="technologies">
-						<p class="html"><?php echo $technologies["html"]; ?></p>
-						<p class="css"><?php echo $technologies["css"]; ?></p>
-						<p class="js"><?php echo $technologies["js"]; ?></p>
-						<p class="sql"><?php echo $technologies["sql"]; ?></p>
-						<p class="php"><?php echo $technologies["php"]; ?></p>
+						<?php
+							$technology = $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['technology'];
+							$technologySplit = explode(";", $technology);
+							foreach ($technologySplit as $item) {
+								$item = str_replace(' ', '', $item);
+								?><p class="<?php echo $item; ?>"><?php echo $technologies[$item]; ?></p><?php
+							}
+						?>
 					</div>
 					<p class="preview">
 						<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description-short'], array_column($languageBody, 'descriptor'))][$lang]; ?>
