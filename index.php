@@ -146,7 +146,7 @@
 				</div>
 				<div class="navigation">
 					<a style="float: left; margin-left: 70px; text-align: right; font-style: underline; font-weight: bold;" href="#start">Home</a>
-					<a style="float: right; margin-right: 70px; text-align: left;" href="portfolio.php">Portfolio</a>
+					<a style="float: right; margin-right: 70px; text-align: left;" href="#">Portfolio</a>
 				</div>
 				<div class="language">
 					<form class="" action="" method="post">
@@ -296,15 +296,6 @@
 				<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description'], array_column($languageBody, 'descriptor'))][$lang]; ?>
 			</p>
 		</div>
-		<!--
-		<div class="popup" id="mypopup">
-			popuptext
-			<button class="popup-btn" onclick="showProjectPopUp('mypopup')" style="cursor: pointer;">
-				Learn More
-
-			</button>
-			<hr>
-		</div>-->
 
 
 		<div class="section project" style="">
