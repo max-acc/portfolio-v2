@@ -107,7 +107,7 @@
 				</div>
 				<div class="navigation">
 					<a style="float: left; margin-left: 70px; text-align: right; font-style: underline; font-weight: bold;" href="#start">Home</a>
-					<a style="float: right; margin-right: 70px; text-align: left;" href="#">Portfolio</a>
+					<a style="float: right; margin-right: 70px; text-align: left;" href="portfolio.php">Portfolio</a>
 				</div>
 				<div class="language">
 					<form class="" action="" method="post">

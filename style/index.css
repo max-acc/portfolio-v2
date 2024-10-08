@@ -134,6 +134,10 @@ header .language img {
 	padding-left: 20px;
 }
 
+.space {
+	height: var(--header-height);
+}
+
 
 .pre-landing {
 	height: calc(100vh - var(--header-height));
