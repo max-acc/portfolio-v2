@@ -284,7 +284,9 @@
 
 
 		<div class="section project" style="">
-			<h1>Projects</h1>
+			<h1>
+				<?php echo $languageBody[array_search('projects-project', array_column($languageBody, 'descriptor'))][$lang]; ?>
+			</h1>
 
 			<div style="min-height: 450px; margin-bottom: 50px;">
 				<div class="slide-in-left-element project-page">
@@ -393,6 +395,13 @@
 					</button>
 				</div>
 			</div>
+
+			<div class="seemore">
+				<a href="portfolio.php">
+					<?php echo $languageBody[array_search('projects-seemore', array_column($languageBody, 'descriptor'))][$lang]; ?>
+				</a>
+			</div>
+
 		</div>
 
 		<!-- About me ------------------------------------------------------------->

@@ -470,6 +470,23 @@ header .language img {
 	border-radius: 15px 15px 0px 0px;
 }
 
+.project .seemore {
+	width: 20%;
+	text-align: center;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.project .seemore a {
+	font-size: 1.2em;
+	border-radius: 15px;
+	border: 0.2em solid var(--color-primary);
+	background-color: var(--color-primary);
+	padding: 10px;
+	transition: 0.25s;
+  cursor: pointer;
+}
+
 .technologies {
 	margin: 0 10px;
 	font-size: 0.7em;
