@@ -14,7 +14,7 @@
 
   require_once "config/load.php";
 
-  if (!empty($_POST) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+  if (!empty($_POST) && $_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["change_lang"])) {
     if ($lang == "en") {
       $lang = "de";
       $_SESSION['lang'] = $lang;
@@ -30,6 +30,32 @@
 
 
   $page_name = "Portfolio";
+
+
+
+
+  if(isset($_POST["tech_select"])){
+    $tech = $_POST["tech_select"];
+    if ($tech == "select_all") {
+      $sql = "SELECT * FROM `project-db`";
+    } else {
+      $sql = "SELECT * FROM `project-db` WHERE `technology` LIKE '%". $tech ."%'";
+    }
+
+    /*echo $sql;*/
+    $projectBody = array();
+    if ($result = $link->query($sql)) {
+      $rowCount = mysqli_num_rows($result);
+
+      while ($row = $result->fetch_assoc()) {
+        //print_r($row);
+        array_push($projectBody, $row);
+      }
+      /*echo $taskInfo[0]["en"];*/
+    }else {
+      echo " <script> alert('The projects from the database have not loaded correctly! asdf'); </script>" ;
+    }
+   }
 
 ?>
 
@@ -82,7 +108,7 @@
 			</div>
 		</header>
 
-    <!--<div class="space"></div>-->
+    <div class="space"></div>
 
     <?php
 
@@ -134,13 +160,23 @@
   			</p>
   		</div>
     <?php
-  }?>
+    }?>
 
 
 
     <!--- Dynamic loaded project previews ------------------------------------->
-    <div class="section project" style="">
-			<h1>Projects</h1>
+    <div class="section project" style="margin-top: 50px;" id="projectScroll">
+			<h1>
+        <?php echo $languageBody[array_search('projects-project', array_column($languageBody, 'descriptor'))][$lang]; ?>
+      </h1>
+      <form class="" action="" method="post">
+        <select class="" name="tech_select"onchange="this.form.submit(); this.size=1; this.blur();">
+          <option value=""><?php echo $languageBody[array_search('projects-select_tech', array_column($languageBody, 'descriptor'))][$lang]; ?></option>
+          <option value="select_all">Select All</option>
+          <option value="python">Python</option>
+          <option value="cpp">C++</option>
+        </select>
+      </form>
       <?php
         $tempProjectCounter = 0;
 
@@ -151,13 +187,21 @@
             for ($projectPerLine=0; $projectPerLine < 2; $projectPerLine++) {?>
               <div class="project-page
                 <?php
-                if (($tempProjectCounter % 2) == 0) {
-                  echo "slide-in-left-element";
+                if ($projectLine == 0) {
+                  if (($tempProjectCounter % 2) == 0) {
+                    echo "slide-in-left-element-1";
+                  } else {
+                    echo "slide-in-right-element-1";
+                  }
                 } else {
-                  echo "slide-in-right-element";
+                  if (($tempProjectCounter % 2) == 0) {
+                    echo "slide-in-left-element";
+                  } else {
+                    echo "slide-in-right-element";
+                  }
                 }
-                 ?>
-              ">
+                ?>
+              " style="<?php if ($tempProjectCounter >= $projectNumber) { echo "visibility: hidden;";} ?>">
       					<?php $projectName = $projectBody[$tempProjectCounter]['descriptor']; ?>
       					<img src="<?php echo $projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['link-img'];?>" alt="">
       					<h2>

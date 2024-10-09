@@ -135,7 +135,7 @@ header .language img {
 }
 
 .space {
-	height: var(--header-height);
+	height: calc(var(--header-height) *0);
 }
 
 
@@ -431,8 +431,42 @@ header .language img {
 }
 
 .project h1 {
-	margin-bottom: 1.5em;
+	margin-bottom: 30px;
 	margin-left: var(--standard-padding);
+}
+
+.project form {
+	margin-bottom: 60px;;
+}
+
+.project select {
+	width: 200px;
+	height: 60px;
+	border-radius: 15px;
+	border-color: transparent;
+	font-size: 1em;
+	color: var(--color-text);
+	text-align: center;
+	background-color: var(--color-header);
+}
+
+.project select:onblur {
+	height: 160px;
+	transition: 1s;
+}
+
+.project option {
+	font-size: 1em;
+	text-align: left;
+	border: 0px solid;
+	border-color: transparent;
+	border-radius: 5px;
+	background-color: var(--color-header);
+	margin: 5px;
+}
+
+.project option:hover {
+	background-color: var(--color-primary);
 }
 
 .project .project-page {
@@ -706,13 +740,13 @@ header .language img {
 	background-color: var(--color-background);
 }
 
-div.slide-in-left-element {
+div.slide-in-left-element, div.slide-in-left-element-1 {
 	float: left;
 	display: inline;
 	width: calc(var(--page-width)/2.2);
 }
 
-div.slide-in-right-element {
+div.slide-in-right-element, div.slide-in-right-element-1 {
 	float: right;
 	display: inline;
 	width: calc(var(--page-width) /2.2);
@@ -811,12 +845,22 @@ th.slide-in-right-element, td.slide-in-right-element {
     animation: slide-from-left linear both;
     animation-timeline: view();
     animation-range: 0vh 30vh;
+	}
+	.slide-in-left-element-1 {
+		animation: slide-from-left linear both;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
   }
 	.slide-in-right-element {
     animation: slide-from-right linear both;
     animation-timeline: view();
     animation-range: 0vh 30vh;
   }
+	.slide-in-right-element-1 {
+		animation: slide-from-right linear both;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}
 	.scale-up-element {
 		animation: scale-up linear both;
     animation-timeline: view();
