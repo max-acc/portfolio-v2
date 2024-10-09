@@ -173,8 +173,10 @@
         <select class="" name="tech_select"onchange="this.form.submit(); this.size=1; this.blur();">
           <option value=""><?php echo $languageBody[array_search('projects-select_tech', array_column($languageBody, 'descriptor'))][$lang]; ?></option>
           <option value="select_all">Select All</option>
-          <option value="python">Python</option>
-          <option value="cpp">C++</option>
+          <?php foreach ($technologies as $key => $item): ?>
+            <?php echo $item; ?>
+            <option value="<?php echo $key; ?>"><?php echo $item; ?></option>
+          <?php endforeach; ?>
         </select>
       </form>
       <?php
