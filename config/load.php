@@ -35,11 +35,11 @@
     "sql" => "SQL",
     "php" => "PHP",
     "python" => "Python",
+    "java" => "Java",
     "cpp" => "C++",
     "api" => "API",
     "arduino" => "Arduino",
     "ml" => "Machine Learning",
-    "" => "",
   ]
 
  ?>

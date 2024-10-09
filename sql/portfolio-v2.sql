@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 09. Okt 2024 um 16:08
+-- Erstellungszeit: 09. Okt 2024 um 17:46
 -- Server-Version: 10.4.17-MariaDB
 -- PHP-Version: 8.0.2
 
@@ -91,7 +91,16 @@ INSERT INTO `project-db` (`id`, `descriptor`, `name`, `technology`, `description
 (1, 'projects-p-tb', 'projects-p-tb-name', 'python; api; sql', 'projects-p-tb-des-s', 'projects-p-tb-des-l', '', '', 'img/img-tradingbot.jpeg'),
 (2, 'projects-p-agc', 'projects-p-agc-name', 'cpp; arduino', 'projects-p-agc-des-s', 'projects-p-agc-des-l', 'https://github.com/max-acc/arduino-game-console', '', 'img/img-arduinogc.jpeg'),
 (3, 'projects-p-nr', 'projects-p-nr-name', 'python; ml', 'projects-p-nr-des-s', 'projects-p-nr-des-l', '', '', 'img/img-imgrec.jpeg'),
-(4, 'projects-p-pv2', 'projects-p-pv2-name', 'html; css; js; sql; php', 'projects-p-pv2-des-s', 'projects-p-pv2-des-l', 'https://github.com/max-acc/portfolio-v2', 'index.php', 'img/img-portfolio-v2.jpeg');
+(4, 'projects-p-pv2', 'projects-p-pv2-name', 'html; css; js; sql; php', 'projects-p-pv2-des-s', 'projects-p-pv2-des-l', 'https://github.com/max-acc/portfolio-v2', 'index.php', 'img/img-portfolio-v2.jpeg'),
+(5, 'projects-p-em', 'projects-p-em-name', 'html; css; php; sql', 'projects-p-em-des-s', 'projects-p-em-des-l', 'https://github.com/max-acc/event-management', '', ''),
+(6, 'projects-p-fr', 'projects-p-fr-name', 'java', 'projects-p-fr-des-s', 'projects-p-fr-des-l', 'https://github.com/max-acc/java-explicit-face-recognition', '', ''),
+(7, 'projects-p-fc', 'projects-p-fc-name', 'java', 'projects-p-fc-des-s', 'projects-p-fc-des-l', '', '', ''),
+(8, 'projects-p-sml', 'projects-p-sml-name', 'cpp; arduino', 'projects-p-sml-des-s', 'projects-p-sml-des-l', 'https://github.com/max-acc/arduino-stepper-motor-lib', '', ''),
+(9, 'projects-p-webp', 'projects-p-webp-name', 'html; css; js', 'projects-p-webp-des-s', 'projects-p-webp-des-l', 'https://github.com/max-acc/HTML-presentation-template', '', ''),
+(10, 'projects-p-pv1', 'projects-p-pv1-name', 'html; css; js', 'projects-p-pv1-des-s', 'projects-p-pv1-des-l', 'https://github.com/max-acc/portfolio-v1', 'max-acc.github.io/portfolio-v1/', ''),
+(11, 'projects-p-calc-pi', 'projects-p-calc-pi-name', 'cpp', 'projects-p-calc-pi-des-s', 'projects-p-calc-pi-des-l', 'https://github.com/max-acc/cPlus-calcultate-pi', '', ''),
+(12, 'projects-p-calc-e', 'projects-p-calc-e-name', 'cpp', 'projects-p-calc-e-des-s', 'projects-p-calc-e-des-l', 'https://github.com/max-acc/cPlus-calculate-e', '', ''),
+(13, 'projects-p-rwd-lp', 'projects-p-rwd-lp-name', 'html; css', 'projects-p-rwd-lp-des-s', 'projects-p-rwd-lp-des-l', '', '', '');
 
 --
 -- Indizes der exportierten Tabellen
@@ -123,7 +132,7 @@ ALTER TABLE `language-db`
 -- AUTO_INCREMENT für Tabelle `project-db`
 --
 ALTER TABLE `project-db`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
