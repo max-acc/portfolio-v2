@@ -97,7 +97,7 @@ INSERT INTO `project-db` (`id`, `descriptor`, `name`, `technology`, `description
 (7, 'projects-p-fc', 'projects-p-fc-name', 'java', 'projects-p-fc-des-s', 'projects-p-fc-des-l', '', '', ''),
 (8, 'projects-p-sml', 'projects-p-sml-name', 'cpp; arduino', 'projects-p-sml-des-s', 'projects-p-sml-des-l', 'https://github.com/max-acc/arduino-stepper-motor-lib', '', ''),
 (9, 'projects-p-webp', 'projects-p-webp-name', 'html; css; js', 'projects-p-webp-des-s', 'projects-p-webp-des-l', 'https://github.com/max-acc/HTML-presentation-template', '', ''),
-(10, 'projects-p-pv1', 'projects-p-pv1-name', 'html; css; js', 'projects-p-pv1-des-s', 'projects-p-pv1-des-l', 'https://github.com/max-acc/portfolio-v1', 'max-acc.github.io/portfolio-v1/', ''),
+(10, 'projects-p-pv1', 'projects-p-pv1-name', 'html; css; js', 'projects-p-pv1-des-s', 'projects-p-pv1-des-l', 'https://github.com/max-acc/portfolio-v1', 'https://max-acc.github.io/portfolio-v1/', ''),
 (11, 'projects-p-calc-pi', 'projects-p-calc-pi-name', 'cpp', 'projects-p-calc-pi-des-s', 'projects-p-calc-pi-des-l', 'https://github.com/max-acc/cPlus-calcultate-pi', '', ''),
 (12, 'projects-p-calc-e', 'projects-p-calc-e-name', 'cpp', 'projects-p-calc-e-des-s', 'projects-p-calc-e-des-l', 'https://github.com/max-acc/cPlus-calculate-e', '', ''),
 (13, 'projects-p-rwd-lp', 'projects-p-rwd-lp-name', 'html; css', 'projects-p-rwd-lp-des-s', 'projects-p-rwd-lp-des-l', '', '', '');
