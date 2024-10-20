@@ -156,7 +156,7 @@
   			</div>
   			<hr>
   			<p class="popup-text">
-  				<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description'], array_column($languageBody, 'descriptor'))][$lang]; ?>
+  				<?php echo $languageBody[array_search($projectBody[array_search($projectName, array_column($projectBody, 'descriptor'))]['description-short'], array_column($languageBody, 'descriptor'))][$lang]; ?>
   			</p>
   		</div>
     <?php
@@ -164,7 +164,7 @@
 
 
 
-    <!--- Dynamic loaded project previews ------------------------------------->
+    <!--- Dynamically loaded project previews ---------------------------------->
     <div class="section project" style="margin-top: 50px;" id="projectScroll">
 			<h1>
         <?php echo $languageBody[array_search('projects-project', array_column($languageBody, 'descriptor'))][$lang]; ?>

@@ -284,7 +284,7 @@
 		</div>
 
 
-		<div class="section project" style="">
+		<div class="section project">
 			<h1>
 				<?php echo $languageBody[array_search('projects-project', array_column($languageBody, 'descriptor'))][$lang]; ?>
 			</h1>
