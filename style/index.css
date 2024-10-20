@@ -768,6 +768,74 @@ th.slide-in-right-element, td.slide-in-right-element {
 	position: relative;
 }
 
+
+@-webkit-keyframes scale-down-height {
+	to {
+		height: 20%;
+		top: 0;
+	}
+}
+
+@-webkit-keyframes slide-from-left {
+  from {
+		margin-left: -100%;
+		filter: blur(5px);
+  }
+	80% {
+		margin-left: -10%;
+		filter: blur(0px);
+	}
+}
+
+@-moz-keyframes slide-from-right {
+  from {
+		margin-right: -100%;
+		filter: blur(1px);
+  }
+	80% {
+		margin-right: -10%;
+		filter: blur(1px);
+	}
+}
+
+@-webkit-keyframes fade-in {
+  from {
+		opacity: 0;
+  }
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes blur-in {
+	from {
+		filter: blur(0px);
+	}
+	to {
+		filter: blur(2px) brightness(67%);
+	}
+}
+
+@-webkit-keyframes scale-up {
+  from {
+		scale: 0.5;
+		opacity: 0.2;
+		filter: blur(5px);
+  }
+}
+
+@-webkit-keyframes wiggle {
+	0% {
+		top: 20px;
+	}
+	50% {
+		top: -20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+
 @keyframes scale-down-height {
 	to {
 		height: 20%;
@@ -835,27 +903,28 @@ th.slide-in-right-element, td.slide-in-right-element {
 	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/*@media (prefers-reduced-motion: no-preference) {*/
 	.scale-down-height-img {
 		animation: scale-down-height linear both;
-    animation-timeline: view();
-    animation-range: 40vh 100vh;
-	}
-  .slide-in-left-element {
-    animation: slide-from-left linear both;
-    animation-timeline: view();
-    animation-range: 0vh 30vh;
+		animation-timeline: view();
+		animation-range: 40vh 100vh;
+		}
+	.slide-in-left-element {
+		animation: slide-from-left linear both;
+		animation-timeline: view();
+		animation-range: 0vh 30vh;
 	}
 	.slide-in-left-element-1 {
 		animation: slide-from-left linear both;
 		animation-duration: 1s;
 		animation-iteration-count: 1;
-  }
+	}
 	.slide-in-right-element {
-    animation: slide-from-right linear both;
-    animation-timeline: view();
-    animation-range: 0vh 30vh;
-  }
+		-moz-animation: slide-from-right linear both;
+		animation: slide-from-right linear both;
+		animation-timeline: view();
+		animation-range: 0vh 30vh;
+	}
 	.slide-in-right-element-1 {
 		animation: slide-from-right linear both;
 		animation-duration: 1s;
@@ -863,12 +932,12 @@ th.slide-in-right-element, td.slide-in-right-element {
 	}
 	.scale-up-element {
 		animation: scale-up linear both;
-    animation-timeline: view();
-    animation-range: 20vh 50vh;
+		animation-timeline: view();
+		animation-range: 20vh 50vh;
 	}
 	.wiggle {
 		animation-name: wiggle;
 		animation-duration: 5s;
 		animation-iteration-count: infinite;
 	}
-}
+/*}*/
