@@ -62,6 +62,7 @@
 
 
 	<body id="body">
+		<div id="start-info" style=" font-size: 13px; position: absolute; top: 700px; left: 10px;"></div>
 		<div id="start" class="pre-landing">
 			<div class="page-sep left">
 				<div class="css-typing">

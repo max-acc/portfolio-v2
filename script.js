@@ -74,7 +74,8 @@ if (isNaN(majorVersion)) {
  fullVersion  = ''+parseFloat(navigator.appVersion); 
  majorVersion = parseInt(navigator.appVersion,10);
 }
+window.onload = function() {
 
 if (browserName == "Firefox") {
-  alert("Using the " + browserName + " Browser may cause unexpected site behaviour! \nBasic functionalities are working fine, but animations are partly browser engine dependant. \nPlease use a Browser with Blink as Engine (e.g. Chrome, Opera, Edge ...)");
+  document.getElementById('start-info').innerHTML = "Using the " + browserName + " Browser may cause unexpected site behaviour! <br> Basic functionalities are working fine, but animations are partly browser engine dependant. <br>Please use a Browser with Blink as Engine (e.g. Chrome, Opera, Edge ...)";}
 }

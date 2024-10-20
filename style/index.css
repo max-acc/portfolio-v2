@@ -24,8 +24,8 @@ html {
 body {
 	background-color: var(--color-background);
 	color: var(--color-text);
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 	min-width: 100vw;
 	overflow-x: hidden;
 }
@@ -35,8 +35,9 @@ body {
 }
 
 h1, h2, h3, p, a, th, td, span {
-  font-style: normal;
-  text-decoration: none;
+	font-style: normal;
+	font-family: "Helvetica", "Arial";
+	text-decoration: none;
 	color: var(--color-text);
 	padding: 0;
 	margin: 0;
@@ -44,10 +45,10 @@ h1, h2, h3, p, a, th, td, span {
 
 header {
 	height: var(--header-height);
-  position: sticky;
-  width: 100%;
-  top: 0;
-  background-color: var(--color-header);
+	position: sticky;
+	width: 100%;
+	top: 0;
+	background-color: var(--color-header);
 	z-index: 42;
 	border-bottom: 5px solid;
 	border-color: var(--color-background);
@@ -286,16 +287,16 @@ header .language img {
 
 
 .home_picture_container {
-  width: 300px;
+	width: 300px;
 	height: 380px;
-  margin: auto;
-  border-radius: 10px;
+	margin: auto;
+	border-radius: 10px;
 }
 
 .pre-landing img {
-  width: 300px;
+	width: 300px;
 	height: 380px;
-  border-radius: 10px;
+	border-radius: 10px;
 	transition: .3s ease;
 }
 
@@ -305,7 +306,7 @@ header .language img {
 
 .home_picture_overlay {
   position: relative;
-  top: -384px;
+  top: -385px;
   bottom: 0;
   height: 380px;
   opacity: 0;
